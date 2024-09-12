@@ -12,6 +12,11 @@ let todos = [
   { id: 2, task: 'Build a To-Do app', completed: false }
 ];
 
+// Ana sayfa için GET endpointi
+app.get('/', (req, res) => {
+  res.send('Merhaba, bu basit bir Web API!');
+});
+
 // Tüm görevleri listeleyen GET endpointi
 app.get('/api/todos', (req, res) => {
   res.json(todos);
